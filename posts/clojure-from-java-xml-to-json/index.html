@@ -6,7 +6,7 @@
     
     <title>Alexander James King  | Clojure from Java</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.73.0" />
+    <meta name="generator" content="Hugo 0.89.4" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -30,17 +30,14 @@
     <meta property="og:title" content="Clojure from Java" />
 <meta property="og:description" content="Calling Clojure from Java to transform XML to JSON" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/clojure-from-java-xml-to-json/" />
+<meta property="og:url" content="/posts/clojure-from-java-xml-to-json/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2014-06-23T19:41:53+02:00" />
 <meta property="article:modified_time" content="2014-06-23T19:41:53+02:00" />
+
 <meta itemprop="name" content="Clojure from Java">
-<meta itemprop="description" content="Calling Clojure from Java to transform XML to JSON">
-<meta itemprop="datePublished" content="2014-06-23T19:41:53&#43;02:00" />
-<meta itemprop="dateModified" content="2014-06-23T19:41:53&#43;02:00" />
+<meta itemprop="description" content="Calling Clojure from Java to transform XML to JSON"><meta itemprop="datePublished" content="2014-06-23T19:41:53+02:00" />
+<meta itemprop="dateModified" content="2014-06-23T19:41:53+02:00" />
 <meta itemprop="wordCount" content="343">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Clojure from Java"/>
 <meta name="twitter:description" content="Calling Clojure from Java to transform XML to JSON"/>
@@ -162,7 +159,7 @@ Create a new map with the values we&rsquo;re interested in
 Convert the new map to JSON
 This example follows the above process but calls the Clojure code from Java, ideally I&rsquo;d wrap this up in a library but to keep things simple I&rsquo;ve invoked the dependencies from Java prior to calling the transform library.</p>
 <p>Source code on GitHub: <a href="https://github.com/alexanderjamesking/clj-from-java-xml-to-json">https://github.com/alexanderjamesking/clj-from-java-xml-to-json</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#f92672">package</span> com.ajk<span style="color:#f92672">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#f92672">package</span> com.ajk<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> clojure.lang.IFn<span style="color:#f92672">;</span>
 
@@ -194,7 +191,7 @@ This example follows the above process but calls the Clojure code from Java, ide
     <span style="color:#f92672">}</span>
 
 <span style="color:#f92672">}</span></code></pre></div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Clojure" data-lang="Clojure">(<span style="color:#66d9ef">ns </span>transform
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Clojure" data-lang="Clojure">(<span style="color:#66d9ef">ns </span>transform
   (<span style="color:#e6db74">:require</span> [clojure.xml <span style="color:#e6db74">:refer</span> [parse]]
             [clojure.zip <span style="color:#e6db74">:refer</span> [xml-zip node up]]
             [clojure.data.zip.xml <span style="color:#e6db74">:refer</span> [xml-&gt; xml1-&gt; text attr attr=]]
@@ -266,7 +263,7 @@ This example follows the above process but calls the Clojure code from Java, ide
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/" >
-    &copy; 2020 Alexander James King
+    &copy; 2021 Alexander James King
   </a>
     <div>
 

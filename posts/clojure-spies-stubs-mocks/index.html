@@ -6,7 +6,7 @@
     
     <title>Alexander James King  | Spy</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.73.0" />
+    <meta name="generator" content="Hugo 0.89.4" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -30,17 +30,14 @@
     <meta property="og:title" content="Spy" />
 <meta property="og:description" content="A Clojure and ClojureScript library for stubs, spies, and mocks" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/clojure-spies-stubs-mocks/" />
+<meta property="og:url" content="/posts/clojure-spies-stubs-mocks/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2018-04-28T19:41:53+02:00" />
 <meta property="article:modified_time" content="2018-04-28T19:41:53+02:00" />
+
 <meta itemprop="name" content="Spy">
-<meta itemprop="description" content="A Clojure and ClojureScript library for stubs, spies, and mocks">
-<meta itemprop="datePublished" content="2018-04-28T19:41:53&#43;02:00" />
-<meta itemprop="dateModified" content="2018-04-28T19:41:53&#43;02:00" />
+<meta itemprop="description" content="A Clojure and ClojureScript library for stubs, spies, and mocks"><meta itemprop="datePublished" content="2018-04-28T19:41:53+02:00" />
+<meta itemprop="dateModified" content="2018-04-28T19:41:53+02:00" />
 <meta itemprop="wordCount" content="404">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spy"/>
 <meta name="twitter:description" content="A Clojure and ClojureScript library for stubs, spies, and mocks"/>
@@ -159,7 +156,7 @@
 <p>I wrote Spy as I have a preference for clojure.test and I wanted some basic stubbing and spying features like those available in sinon.js or Mockito
 Testing using Spy</p>
 <p>Let&rsquo;s start with the following example which looks up an email address given an id and a message then sends a message to that email address.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Clojure" data-lang="Clojure">(<span style="color:#66d9ef">def </span>beatle-&gt;email
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Clojure" data-lang="Clojure">(<span style="color:#66d9ef">def </span>beatle-&gt;email
   {<span style="color:#e6db74">:john</span>   <span style="color:#e6db74">&#34;john.lennon@beatles.com&#34;</span>
    <span style="color:#e6db74">:paul</span>   <span style="color:#e6db74">&#34;paul.mccartney@beatles.com&#34;</span>
    <span style="color:#e6db74">:george</span> <span style="color:#e6db74">&#34;george.harrison@beatles.com&#34;</span>
@@ -177,7 +174,7 @@ Testing using Spy</p>
     (<span style="color:#a6e22e">send-message</span> email message)))</code></pre></div>
 <p>And let&rsquo;s assume for now that we want to test that send-message is called only when the id passed into the email-beatle function actually matches a beatle in our map.</p>
 <p>We can use <a href="https://clojuredocs.org/clojure.core/with-redefs">with-redefs</a> to replace the send-message function with a spy, the original function is wrapped by the spy so we can test the function was called.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Clojure" data-lang="Clojure">(<span style="color:#66d9ef">def </span>beatle-&gt;email
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Clojure" data-lang="Clojure">(<span style="color:#66d9ef">def </span>beatle-&gt;email
   {<span style="color:#e6db74">:john</span>   <span style="color:#e6db74">&#34;john.lennon@beatles.com&#34;</span>
    <span style="color:#e6db74">:paul</span>   <span style="color:#e6db74">&#34;paul.mccartney@beatles.com&#34;</span>
    <span style="color:#e6db74">:george</span> <span style="color:#e6db74">&#34;george.harrison@beatles.com&#34;</span>
@@ -232,7 +229,7 @@ Testing using Spy</p>
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/" >
-    &copy; 2020 Alexander James King
+    &copy; 2021 Alexander James King
   </a>
     <div>
 

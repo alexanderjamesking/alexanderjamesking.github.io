@@ -6,10 +6,15 @@
     <description>Recent content in Alex King on Alexander James King</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Apr 2019 12:00:53 +0200</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 01 Dec 2021 15:50:53 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstract Clojure</title>
+      <link>/posts/abstract-clojure/</link>
+      <pubDate>Wed, 01 Dec 2021 15:50:53 +0200</pubDate>
+      
+      <guid>/posts/abstract-clojure/</guid>
+      <description>Abstract Clojure: an article I wrote for JUXT about programming to abstractions in Clojure.</description>
+    </item>
     
     <item>
       <title>From JavaScript to ClojureScript</title>
@@ -50,7 +55,7 @@ Spy is a library I have written that is aimed at clojure.test users, it can be u
       <description>An implementation of minesweeper in ClojureScript, check out the source code on GitHub.
 I drew all the graphics inline using SVG, rendering with React via Reagent.
 I used Devcards to run the unit tests and to see what the UI components looked like in all states.
-      </description>
+   </description>
     </item>
     
     <item>

@@ -6,7 +6,7 @@
     
     <title>Alexander James King  | SNS, SQS and Node.js</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.73.0" />
+    <meta name="generator" content="Hugo 0.89.4" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -30,17 +30,14 @@
     <meta property="og:title" content="SNS, SQS and Node.js" />
 <meta property="og:description" content="A simple Node.js example that publishes a message to a SNS topic, then consumes the message using a SQS queue" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/node-js-aws-sdk-js-sns-sqs-example/" />
+<meta property="og:url" content="/posts/node-js-aws-sdk-js-sns-sqs-example/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2013-11-20T19:41:53+02:00" />
 <meta property="article:modified_time" content="2013-11-20T19:41:53+02:00" />
+
 <meta itemprop="name" content="SNS, SQS and Node.js">
-<meta itemprop="description" content="A simple Node.js example that publishes a message to a SNS topic, then consumes the message using a SQS queue">
-<meta itemprop="datePublished" content="2013-11-20T19:41:53&#43;02:00" />
-<meta itemprop="dateModified" content="2013-11-20T19:41:53&#43;02:00" />
+<meta itemprop="description" content="A simple Node.js example that publishes a message to a SNS topic, then consumes the message using a SQS queue"><meta itemprop="datePublished" content="2013-11-20T19:41:53+02:00" />
+<meta itemprop="dateModified" content="2013-11-20T19:41:53+02:00" />
 <meta itemprop="wordCount" content="206">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SNS, SQS and Node.js"/>
 <meta name="twitter:description" content="A simple Node.js example that publishes a message to a SNS topic, then consumes the message using a SQS queue"/>
@@ -165,7 +162,7 @@
 <li>Set up IAM User and give the user access to SNS and SQS</li>
 <li>Create and download the IAM User credentials</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// publish a message to an SNS topic
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// publish a message to an SNS topic
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">AWS</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;aws-sdk&#39;</span>);
     <span style="color:#a6e22e">AWS</span>.<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">loadFromPath</span>(<span style="color:#e6db74">&#39;./config.json&#39;</span>);
@@ -178,9 +175,8 @@
 
 <span style="color:#a6e22e">sns</span>.<span style="color:#a6e22e">publish</span>(<span style="color:#a6e22e">params</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">data</span>) {
   <span style="color:#75715e">// published message
-</span><span style="color:#75715e"></span>});
-</code></pre></div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// consume a message from an SQS queue
+</span><span style="color:#75715e"></span>});</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// consume a message from an SQS queue
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">AWS</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;aws-sdk&#39;</span>);
     <span style="color:#a6e22e">AWS</span>.<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">loadFromPath</span>(<span style="color:#e6db74">&#39;./config.json&#39;</span>);
@@ -210,16 +206,14 @@
 </span><span style="color:#75715e"></span>        }
       );
     }
-});
-</code></pre></div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// config.json to store AWS credentials for this example
+});</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">// config.json to store AWS credentials for this example
 </span><span style="color:#75715e"></span>
 {
   <span style="color:#e6db74">&#34;accessKeyId&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_ACCESS_KEY&#34;</span>,
   <span style="color:#e6db74">&#34;secretAccessKey&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_SECRET_ACCESS_KEY&#34;</span>,
   <span style="color:#e6db74">&#34;region&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;eu-west-1&#34;</span>
-}
-</code></pre></div>
+}</code></pre></div>
 <ul class="pa0">
   
 </ul>
@@ -242,7 +236,7 @@
     <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/" >
-    &copy; 2020 Alexander James King
+    &copy; 2021 Alexander James King
   </a>
     <div>
 
