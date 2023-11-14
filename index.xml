@@ -1,106 +1,88 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alex King on Alexander James King</title>
+    <title>Alex King on ajk</title>
     <link>/</link>
-    <description>Recent content in Alex King on Alexander James King</description>
+    <description>Recent content in Alex King on ajk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Dec 2021 15:50:53 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 15:50:53 +0200</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Abstract Clojure</title>
       <link>/posts/abstract-clojure/</link>
       <pubDate>Wed, 01 Dec 2021 15:50:53 +0200</pubDate>
-      
       <guid>/posts/abstract-clojure/</guid>
       <description>Abstract Clojure: an article I wrote for JUXT about programming to abstractions in Clojure.</description>
     </item>
-    
     <item>
       <title>From JavaScript to ClojureScript</title>
       <link>/posts/migrating-js-to-clojurescript/</link>
       <pubDate>Sat, 06 Apr 2019 12:00:53 +0200</pubDate>
-      
       <guid>/posts/migrating-js-to-clojurescript/</guid>
       <description>As software evolves along with the languages and frameworks it is built upon, it&amp;rsquo;s easy to create a monster. This is the tale of tackling complexity at the heart of Exoscale, and how a data-driven approach with ClojureScript enabled us to seamlessly replace a JavaScript app without user outage.
 At Dutch Clojure Days 2019 I spoke about some of our work at Exoscale, where we&amp;rsquo;ve been migrating a legacy Angular application to ClojureScript.</description>
     </item>
-    
     <item>
       <title>CircleCI and Docker Pipeline</title>
       <link>/posts/exoscale-circleci-docker/</link>
       <pubDate>Thu, 22 Nov 2018 19:41:53 +0200</pubDate>
-      
       <guid>/posts/exoscale-circleci-docker/</guid>
       <description>An article I wrote for Exoscale explaining the differences between Continuous Integration, Continuous Delivery and Continuous deployment, with an example showing how to setup a CircleCI pipeline that deploys to Exoscale following a successful build.
 Continuous Delivery Pipeline on Exoscale using CircleCI and Docker</description>
     </item>
-    
     <item>
       <title>Spy</title>
       <link>/posts/clojure-spies-stubs-mocks/</link>
       <pubDate>Sat, 28 Apr 2018 19:41:53 +0200</pubDate>
-      
       <guid>/posts/clojure-spies-stubs-mocks/</guid>
       <description>As of today, there are two main libraries used for testing in Clojure, clojure.test and Midje. clojure.test is extremely simple and it provides a very small API allowing you to write a basic test suite, Midje on the other hand is slightly more complex but it provides a wealth of features.
 Spy is a library I have written that is aimed at clojure.test users, it can be used with both Clojure and ClojureScript.</description>
     </item>
-    
     <item>
       <title>CLJS Minesweeper</title>
       <link>/posts/clojurescript-minesweeper/</link>
       <pubDate>Fri, 26 May 2017 19:41:53 +0200</pubDate>
-      
       <guid>/posts/clojurescript-minesweeper/</guid>
       <description>An implementation of minesweeper in ClojureScript, check out the source code on GitHub.
 I drew all the graphics inline using SVG, rendering with React via Reagent.
-I used Devcards to run the unit tests and to see what the UI components looked like in all states.
-   </description>
+I used Devcards to run the unit tests and to see what the UI components looked like in all states.</description>
     </item>
-    
     <item>
       <title>Clojure from Java</title>
       <link>/posts/clojure-from-java-xml-to-json/</link>
       <pubDate>Mon, 23 Jun 2014 19:41:53 +0200</pubDate>
-      
       <guid>/posts/clojure-from-java-xml-to-json/</guid>
       <description>Working with XML is painful in Java, there are many options such as DOM, SAX, StAX, JAXB, XSLT but they&amp;rsquo;re all verbose compared to the equivalent code in Clojure where you can make use of Maps and Zippers.
 In Clojure my approach is usually as follows:
 Parse the XML into a map Navigate the map using a zipper Create a new map with the values we&amp;rsquo;re interested in Convert the new map to JSON This example follows the above process but calls the Clojure code from Java, ideally I&amp;rsquo;d wrap this up in a library but to keep things simple I&amp;rsquo;ve invoked the dependencies from Java prior to calling the transform library.</description>
     </item>
-    
     <item>
       <title>Clojure core.async HTTP request</title>
       <link>/posts/clojure-core-async-http-request/</link>
       <pubDate>Tue, 20 May 2014 19:41:53 +0200</pubDate>
-      
       <guid>/posts/clojure-core-async-http-request/</guid>
       <description>Requests 20 snippets from fssnip.net sequentially and in parallel, profiles using timbre and outputs the results.
 (ns batchreq.core (:refer-clojure :exclude [map reduce into partition partition-by take merge]) (:require [clojure.core.async :refer :all :as async] [clj-http.client :as client]) (:use taoensso.timbre taoensso.timbre.profiling)) (defnp http-get [id] (client/get (format &amp;#34;http://fssnip.net/%d&amp;#34; id)) id) (defnp sequentially [rn res] (doseq [i rn] ; sequential http-get for each item in the range (swap! res conj (http-get i)))) (defnp in-parallel [rn res] (let [channel (chan)] (doseq [i rn] ; send the http-get requests to the channel (non blocking) (go (&amp;gt;!</description>
     </item>
-    
     <item>
       <title>SNS, SQS and Node.js</title>
       <link>/posts/node-js-aws-sdk-js-sns-sqs-example/</link>
       <pubDate>Wed, 20 Nov 2013 19:41:53 +0200</pubDate>
-      
       <guid>/posts/node-js-aws-sdk-js-sns-sqs-example/</guid>
       <description>A simple Node.js example that publishes a message to a SNS topic, then consumes the message using a SQS queue.
 Full source code (AWS Credentials omitted)
-AWS Console Steps  Set up SNS Topic Set up SQS Queue Set permissions on the Queue to allow the topic to publish to it Subscribe the Queue to the SNS Topic Set up IAM User and give the user access to SNS and SQS Create and download the IAM User credentials  // publish a message to an SNS topic  var AWS = require(&amp;#39;aws-sdk&amp;#39;); AWS.</description>
+AWS Console Steps Set up SNS Topic Set up SQS Queue Set permissions on the Queue to allow the topic to publish to it Subscribe the Queue to the SNS Topic Set up IAM User and give the user access to SNS and SQS Create and download the IAM User credentials // publish a message to an SNS topic var AWS = require(&amp;#39;aws-sdk&amp;#39;); AWS.</description>
     </item>
-    
     <item>
       <title>CV</title>
       <link>/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/cv/</guid>
       <description>Profile An enthusiastic, hard working, senior software engineer, passionate about delivering clean, well tested code, that is easy for others to understand.
 Adept at working in agile environments, pair programming, and communicating technical implications and processes to non-technical colleagues.
 A versatile developer, experienced in both client and server side development, with a natural passion for software engineering.
-Expertise  Clojure, ClojureScript, Emacs, Leiningen, Reagent, Re-frame Scala, SBT, Play, Akka-Http Java, Maven, Groovy, Spring, Cucumber JVM, Apache Camel, JMS, VisualVM Javascript, ES6, React, Redux, Node.</description>
+Expertise Clojure, ClojureScript, Emacs, Leiningen, Reagent, Re-frame Scala, SBT, Play, Akka-Http Java, Maven, Groovy, Spring, Cucumber JVM, Apache Camel, JMS, VisualVM Javascript, ES6, React, Redux, Node.</description>
     </item>
-    
   </channel>
 </rss>
