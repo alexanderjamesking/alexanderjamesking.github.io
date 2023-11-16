@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alex King on ajk</title>
+    <title>Alexander James King on ajk</title>
     <link>/</link>
-    <description>Recent content in Alex King on ajk</description>
+    <description>Recent content in Alexander James King on ajk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Dec 2021 15:50:53 +0200</lastBuildDate>
@@ -56,23 +56,6 @@ I used Devcards to run the unit tests and to see what the UI components looked l
       <description>Working with XML is painful in Java, there are many options such as DOM, SAX, StAX, JAXB, XSLT but they&amp;rsquo;re all verbose compared to the equivalent code in Clojure where you can make use of Maps and Zippers.
 In Clojure my approach is usually as follows:
 Parse the XML into a map Navigate the map using a zipper Create a new map with the values we&amp;rsquo;re interested in Convert the new map to JSON This example follows the above process but calls the Clojure code from Java, ideally I&amp;rsquo;d wrap this up in a library but to keep things simple I&amp;rsquo;ve invoked the dependencies from Java prior to calling the transform library.</description>
-    </item>
-    <item>
-      <title>Clojure core.async HTTP request</title>
-      <link>/posts/clojure-core-async-http-request/</link>
-      <pubDate>Tue, 20 May 2014 19:41:53 +0200</pubDate>
-      <guid>/posts/clojure-core-async-http-request/</guid>
-      <description>Requests 20 snippets from fssnip.net sequentially and in parallel, profiles using timbre and outputs the results.
-(ns batchreq.core (:refer-clojure :exclude [map reduce into partition partition-by take merge]) (:require [clojure.core.async :refer :all :as async] [clj-http.client :as client]) (:use taoensso.timbre taoensso.timbre.profiling)) (defnp http-get [id] (client/get (format &amp;#34;http://fssnip.net/%d&amp;#34; id)) id) (defnp sequentially [rn res] (doseq [i rn] ; sequential http-get for each item in the range (swap! res conj (http-get i)))) (defnp in-parallel [rn res] (let [channel (chan)] (doseq [i rn] ; send the http-get requests to the channel (non blocking) (go (&amp;gt;!</description>
-    </item>
-    <item>
-      <title>SNS, SQS and Node.js</title>
-      <link>/posts/node-js-aws-sdk-js-sns-sqs-example/</link>
-      <pubDate>Wed, 20 Nov 2013 19:41:53 +0200</pubDate>
-      <guid>/posts/node-js-aws-sdk-js-sns-sqs-example/</guid>
-      <description>A simple Node.js example that publishes a message to a SNS topic, then consumes the message using a SQS queue.
-Full source code (AWS Credentials omitted)
-AWS Console Steps Set up SNS Topic Set up SQS Queue Set permissions on the Queue to allow the topic to publish to it Subscribe the Queue to the SNS Topic Set up IAM User and give the user access to SNS and SQS Create and download the IAM User credentials // publish a message to an SNS topic var AWS = require(&amp;#39;aws-sdk&amp;#39;); AWS.</description>
     </item>
     <item>
       <title>CV</title>
