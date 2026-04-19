@@ -23,7 +23,7 @@
     <div class="mark"><a href="{{ "/" | relURL }}">Alexander James King</a></div>
     <nav class="nav" aria-label="Primary">
       <a href="{{ "/" | relURL }}"{{ if or .IsHome (eq .Section "posts") }} class="here"{{ end }}>posts</a>
-      <a href="{{ "/about/" | relURL }}"{{ if eq .RelPermalink "/about/" }} class="here"{{ end }}>about</a>
+      <a href="{{ "/work/" | relURL }}"{{ if eq .RelPermalink "/work/" }} class="here"{{ end }}>work</a>
       <a href="{{ "/life/" | relURL }}"{{ if eq .RelPermalink "/life/" }} class="here"{{ end }}>life</a>
       <a href="{{ "/contact/" | relURL }}"{{ if eq .RelPermalink "/contact/" }} class="here"{{ end }}>contact</a>
     </nav>

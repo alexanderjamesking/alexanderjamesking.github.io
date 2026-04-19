@@ -1,8 +1,7 @@
 ---
-title: "About"
-description: "About Alexander James King."
-heading: "Two decades of software."
-subtitle: "An enthusiastic, hard working, senior software architect with 20 years of experience. Passionate about crafting clean, well tested code that is easy for others to understand."
+title: "Work"
+description: "Twenty years of software engineering."
+heading: "Twenty years <em>of software</em>"
 layout: about
 experience:
   - years: "2025 —"
@@ -46,4 +45,6 @@ experience:
     role: "BSc (Hons) Computer Science"
 ---
 
-Experienced working in regulated and safety-critical domains including medical devices, government systems, and critical cloud infrastructure where availability and correctness are non-negotiable. Adept at working autonomously in async, remote-first environments, understanding business problems and building software that reflects the domain it serves. A clear communicator, experienced in conveying technical implications to non-technical colleagues.
+Since graduating back in 2005, I've spent twenty years making writing software, mostly on the JVM — Java at the BBC, Scala and Clojure on consultancy gigs, Clojure at Exoscale, and now TypeScript and C# at PeriVision. The last six have been as much about leading teams as writing code.
+
+Most of my career has been in regulated or safety-critical domains: medical devices, government tax systems, public cloud infrastructure.
