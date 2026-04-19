@@ -1,0 +1,10 @@
+baseURL = "https://www.alexanderjamesking.com/"
+title = "Alexander James King"
+theme = "ajk"
+languageCode = "en"
+
+[params]
+  description = "Alexander James King — Senior Software Architect & Engineering Leader."
+
+[markup.goldmark.renderer]
+  unsafe = true

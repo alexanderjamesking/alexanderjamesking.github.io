@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <div class="page-title">
+    {{ with .Params.heading }}<h1>{{ . | safeHTML }}</h1>{{ else }}<h1>{{ .Title }}</h1>{{ end }}
+    {{ with .Params.subtitle }}<p class="subtitle">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+
+  <section class="writing" aria-label="Posts">
+
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    <ol>
+      {{ range $posts.ByDate.Reverse }}
+      <li data-tag="{{ with .Params.tags }}{{ index . 0 }}{{ end }}">
+        <span class="date">{{ .Date.Format "2006" }} &middot; {{ .Date.Format "01" }}</span>
+        <div>
+          <div class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+          {{ with .Description }}<p class="excerpt">{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+{{ end }}
+

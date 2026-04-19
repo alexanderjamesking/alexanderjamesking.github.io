@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <div class="page-title">
+    {{ with .Params.heading }}<h1>{{ . | safeHTML }}</h1>{{ else }}<h1>{{ .Title }}</h1>{{ end }}
+    {{ with .Params.subtitle }}<p class="subtitle">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+
+  {{ with .Params.links }}
+  <section>
+    <ul class="lines">
+      {{ range . }}
+      <li>
+        <span class="k">{{ .label }}</span>
+        <div><a href="{{ .url }}"{{ if not (hasPrefix .url "mailto:") }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a></div>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ with .Content }}
+  <section class="prose">
+    {{ . }}
+  </section>
+  {{ end }}
+{{ end }}

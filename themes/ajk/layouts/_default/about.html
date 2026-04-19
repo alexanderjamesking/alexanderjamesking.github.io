@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <div class="page-title">
+    {{ with .Params.heading }}<h1>{{ . | safeHTML }}</h1>{{ else }}<h1>{{ .Title }}</h1>{{ end }}
+    {{ with .Params.subtitle }}<p class="subtitle">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+
+  {{ with .Content }}
+  <section class="prose" aria-label="About">
+    {{ . }}
+  </section>
+  {{ end }}
+
+  {{ with .Params.experience }}
+  <section>
+    <header>
+      <h2>Experience</h2>
+    </header>
+    <ol class="lines">
+      {{ range . }}
+      <li>
+        <span class="k">{{ .years }}</span>
+        <div>
+          <strong>{{ .company }}</strong>{{ with .role }} &middot; <em>{{ . }}</em>{{ end }}
+          {{ with .detail }}<br><span class="detail">{{ . }}</span>{{ end }}
+          {{ with .tech }}<div class="tech">{{ delimit . " · " }}</div>{{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+  {{ end }}
+{{ end }}

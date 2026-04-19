@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article>
+  <div class="page-title">
+    <div class="post-meta">
+      <span>{{ .Date.Format "January 2006" }}</span>
+      {{ with .Params.type_label }}<span class="dot">&middot;</span><span>{{ . }}</span>{{ end }}
+      {{ with .Params.reading_time }}<span class="dot">&middot;</span><span>{{ . }}</span>{{ end }}
+    </div>
+    {{ with .Params.heading }}<h1>{{ . | safeHTML }}</h1>{{ else }}<h1>{{ .Title }}</h1>{{ end }}
+    {{ with .Description }}<p class="subtitle">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  <nav class="post-nav" aria-label="Post navigation">
+    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
+    <a href="{{ "/" | relURL }}">All posts &rarr;</a>
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}
+  </nav>
+</article>
+{{ end }}

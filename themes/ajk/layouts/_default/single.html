@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="page-title">
+    {{ with .Params.heading }}<h1>{{ . | safeHTML }}</h1>{{ else }}<h1>{{ .Title }}</h1>{{ end }}
+    {{ with .Params.subtitle }}<p class="subtitle">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+
+  {{ with .Content }}
+  <div class="prose">
+    {{ . }}
+  </div>
+  {{ end }}
+{{ end }}
