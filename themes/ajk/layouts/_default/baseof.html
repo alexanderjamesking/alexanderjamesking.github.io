@@ -13,19 +13,18 @@
 </head>
 <body>
 
-<button class="toggle" id="theme-toggle" aria-label="Toggle theme">
-  <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-</button>
-
 <div class="page">
 
   <header class="masthead">
-    <div class="mark"><a href="{{ "/" | relURL }}">Alexander James King</a></div>
+    <div class="mark"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></div>
     <nav class="nav" aria-label="Primary">
       <a href="{{ "/" | relURL }}"{{ if or .IsHome (eq .Section "posts") }} class="here"{{ end }}>posts</a>
       <a href="{{ "/work/" | relURL }}"{{ if eq .RelPermalink "/work/" }} class="here"{{ end }}>work</a>
       <a href="{{ "/life/" | relURL }}"{{ if eq .RelPermalink "/life/" }} class="here"{{ end }}>life</a>
       <a href="{{ "/contact/" | relURL }}"{{ if eq .RelPermalink "/contact/" }} class="here"{{ end }}>contact</a>
+      <button class="toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
     </nav>
   </header>
 
@@ -35,52 +34,6 @@
     <div>&copy; {{ now.Format "2006" }} Alexander James King</div>
   </footer>
 
-</div>
-
-<!-- Tweaks -->
-<div class="tweaks" id="tweaks" role="region" aria-label="Tweaks">
-  <h4>Tweaks</h4>
-  <div class="row">
-    <label>Fonts</label>
-    <div class="seg" data-key="fonts">
-      <button data-val="serif">serif</button>
-      <button data-val="sans">sans</button>
-      <button data-val="mono">mono</button>
-      <button data-val="mixed">mixed</button>
-    </div>
-  </div>
-  <div class="row">
-    <label>Density</label>
-    <div class="seg" data-key="density">
-      <button data-val="tight">tight</button>
-      <button data-val="normal">normal</button>
-      <button data-val="airy">airy</button>
-    </div>
-  </div>
-  <div class="row">
-    <label>Accent</label>
-    <div class="seg" data-key="accent">
-      <button data-val="none">none</button>
-      <button data-val="warm">warm</button>
-      <button data-val="cool">cool</button>
-      <button data-val="green">green</button>
-    </div>
-  </div>
-  <div class="row">
-    <label>Layout</label>
-    <div class="seg" data-key="layout">
-      <button data-val="index">index</button>
-      <button data-val="compact">compact</button>
-      <button data-val="narrative">narrative</button>
-    </div>
-  </div>
-  <div class="row">
-    <label>Blog list</label>
-    <div class="seg" data-key="blog">
-      <button data-val="minimal">minimal</button>
-      <button data-val="excerpts">excerpts</button>
-    </div>
-  </div>
 </div>
 
 <script src="{{ "/site.js" | relURL }}"></script>
