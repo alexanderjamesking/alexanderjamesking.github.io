@@ -41,9 +41,7 @@ and the test doesn't read as a description of what we actually care about.
 `spy/called-with?` compares arguments using Clojure's `=`. `any` provides
 values that implement `IPersistentCollection/equiv` with custom logic, so they
 participate in `=` as matchers. There is no adapter layer, no protocol to extend, no
-configuration needed. The two libraries compose for free.
-
-The same assertion becomes:
+configuration needed. The same assertion becomes:
 
 ```clojure
 (let [f (spy/spy identity)
@@ -55,8 +53,8 @@ The same assertion becomes:
                            :created-at any/Instant})))
 ```
 
-The map literal is the assertion. Specify the values you control, use matchers for
-everything generated. The intent is immediate. `any` gives you a toolkit of matcher
+Specify the values you control, use matchers for everything generated.
+The intent is immediate. `any` gives you a toolkit of matcher
 values and a macro to build your own. They all behave as first-class values so you
 can embed them anywhere `=` is used.
 
