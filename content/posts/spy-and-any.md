@@ -38,8 +38,6 @@ Say we spy on a function that stores a record with a generated UUID and timestam
 This works, but the structure of the map is scattered across three separate assertions
 and the test doesn't read as a description of what we actually care about.
 
-## The solution
-
 `spy/called-with?` compares arguments using Clojure's `=`. `any` provides
 values that implement `IPersistentCollection/equiv` with custom logic, so they
 participate in `=` as matchers. There is no adapter layer, no protocol to extend, no
@@ -58,12 +56,9 @@ The same assertion becomes:
 ```
 
 The map literal is the assertion. Specify the values you control, use matchers for
-everything generated. The intent is immediate.
-
-## What `any` provides
-
-`any` gives you a toolkit of matcher values and a macro to build your own. They all
-behave as first-class values so you can embed them anywhere `=` is used.
+everything generated. The intent is immediate. `any` gives you a toolkit of matcher
+values and a macro to build your own. They all behave as first-class values so you
+can embed them anywhere `=` is used.
 
 ```clojure
 any/string
@@ -94,8 +89,6 @@ any/not-nil
                            :genres any/vector
                            :tags   any/set})))
 ```
-
-### More examples
 
 ```clojure
 ;; Java time
@@ -137,8 +130,6 @@ any/uuid-string
 ;; Custom — builds a matcher from any predicate; reusable as a var
 (any/any [n "positive even int"] (and (int? n) (pos? n) (even? n)))
 ```
-
-## Wrapping up
 
 Ivan did a great job with [any](https://github.com/igrishaev/any). The library is small,
 focused, and composed well with `spy` without either side needing to know about the other,
