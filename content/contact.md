@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 description: "Get in touch with Alexander James King."
-heading: 'Email is the best way <em>to reach me.</em>'
+heading: 'Feel free to contact me <em>via email.</em>'
 subtitle: ""
 layout: contact
 links:
