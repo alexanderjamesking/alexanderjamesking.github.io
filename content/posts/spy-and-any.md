@@ -76,6 +76,7 @@ any/not-nil
 (let [f (spy/spy (constantly nil))
       _ (f {:to "Donovan" :body "Catch the wind"})]
   (is (spy/called-with? f {:to any/string :body any/string})))
+
 ```
 
 ```clojure
@@ -133,5 +134,4 @@ Ivan did a great job with [any](https://github.com/igrishaev/any). The library i
 focused, and composed well with `spy` without either side needing to know about the other,
 which is exactly how good Clojure libraries should work.
 
-If you're using `spy` and you need argument matchers, try `any`. Full working examples can
-be found in the [any-spy](https://github.com/alexanderjamesking/any-spy) repo.
+If you're using `spy` and you need argument matchers, try `any`.
