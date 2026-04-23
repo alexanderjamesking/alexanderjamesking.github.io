@@ -1,7 +1,7 @@
 ---
 title: "Work"
 description: "Twenty years of software engineering."
-heading: "Twenty years <em>of software</em>"
+heading: "Alexander James King"
 layout: about
 experience:
   - years: "2025 —"
@@ -45,6 +45,6 @@ experience:
     role: "BSc (Hons) Computer Science"
 ---
 
-Since graduating back in 2005, I've spent twenty years making writing software, mostly on the JVM — Java at the BBC, Scala and Clojure on consultancy gigs, Clojure at Exoscale, and now TypeScript and C# at PeriVision. The last six have been as much about leading teams as writing code.
+Since graduating back in 2005, I've spent twenty years making writing software, mostly on the JVM, with Java at the BBC, Scala and Clojure on consultancy gigs, Clojure at Exoscale, and now TypeScript and C# at PeriVision. The last six have been as much about leading teams as writing code.
 
 Most of my career has been in regulated or safety-critical domains: medical devices, government tax systems, public cloud infrastructure.

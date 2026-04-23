@@ -70,18 +70,18 @@ img { max-width: 100%; height: auto; }
 .page {
   max-width: var(--col);
   margin: 0 auto;
-  padding: 72px 32px 84px;
+  padding: 32px 32px 32px;
 }
 @media (max-width: 640px) {
   body { font-size: 17px; }
-  .page { padding: 32px 22px 44px; }
+  .page { padding: 20px 22px 20px; }
 }
 
 /* --- Masthead --- */
 header.masthead {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   gap: 8px 16px;
   margin-bottom: 43px;
@@ -92,7 +92,7 @@ header.masthead {
 .nav {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 8px;
   font-family: var(--meta-font);
   font-size: 11.5px;
   letter-spacing: 0.08em;
@@ -103,7 +103,7 @@ header.masthead {
 .nav a:hover { color: var(--text); }
 .nav a.here { color: var(--text); }
 @media (max-width: 640px) {
-  .nav { gap: 18px; }
+  .nav { gap: 6px; }
 }
 
 /* --- Section headers --- */
@@ -310,7 +310,7 @@ section > header .rule {
 
 /* --- Footer --- */
 footer.foot {
-  margin-top: 84px;
+  margin-top: 48px;
   padding-top: 28px;
   display: flex;
   justify-content: space-between;
@@ -343,6 +343,28 @@ footer.foot a:hover { color: var(--text); }
 .toggle .icon-sun, .toggle .icon-moon { display: none; }
 :root[data-theme="light"] .toggle .icon-moon { display: block; }
 :root[data-theme="dark"]  .toggle .icon-sun  { display: block; }
+
+/* --- Social icon links --- */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 140ms, border-color 140ms;
+}
+.social-link:hover { color: var(--text); border-color: var(--rule-strong); }
+.social-link.here { color: var(--text); border-color: var(--rule-strong); }
+
+.work-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 40px;
+}
 
 /* --- Syntax highlighting (Chroma / github + github-dark) --- */
 .chroma { background: var(--surface); color: var(--text); }
