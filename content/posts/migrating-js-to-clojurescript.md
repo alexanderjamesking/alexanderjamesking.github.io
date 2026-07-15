@@ -10,7 +10,7 @@ As software evolves along with the languages and frameworks it is built upon, it
 At Dutch Clojure Days 2019 I spoke about some of our work at Exoscale, where we've been migrating a legacy Angular application to ClojureScript.
 
 
-{{< youtube yhQp-gDHnZ0 >}}
+{{< youtube yhQp-GDHnZ0 >}}
 
 
 [Slides](https://speakerdeck.com/alexanderjamesking/how-we-migrated-a-complex-javascript-application-to-clojurescript-step-by-step)
